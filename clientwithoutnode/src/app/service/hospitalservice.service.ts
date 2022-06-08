@@ -43,7 +43,7 @@ export class HospitalserviceService {
     return this.httpClient.post<IDoctor>(dataUrl, Dgroup).pipe(catchError(this.handleError));
   }
    //get Patient by id
-   public getPatient(patient_id:number):Observable<IDoctor>{
+   public getPatient(patient_id:number):Observable<IPatient>{
     let dataUrl:string = `${this.serverUrl}/patients/patient/${patient_id}`;
     return this.httpClient.get<IDoctor>(dataUrl).pipe(catchError(this.handleError));
   }

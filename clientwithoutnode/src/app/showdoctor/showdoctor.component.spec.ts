@@ -23,7 +23,7 @@ describe('ShowdoctorComponent', () => {
     expect(component).toBeTruthy();
   });
 
-  // it("testing doctordetails",()=>{
-  //   expect(component.ngOnInit).toContain(component.doctor);
-  // });
+  it("testing doctordetails",()=>{
+    expect(component.ngOnInit).toContain(component.doctor);
+  });
 });

@@ -12,7 +12,7 @@
     </div>
   </form>
 </div>
-<!--  -->
+<!-- Doctor Card -->
 <div class="card text-center">
   <div class="card-header">
     DOCTOR PROFILE
@@ -27,8 +27,11 @@
                 <div class="col-sm-4 bg-c-lite-green user-profile">
                   <div class="card-block text-center text-white">
                     <div class="m-b-25">
-                      <img src="../../assets/img/doctors/doctors-4.jpg" class="img-radius"
+                      <img *ngIf="!male; else female" src="../../assets/img/doctors/doctors-1.jpg" class="img-radius"
                         alt="User-Profile-Image">
+                      <ng-template #female>
+                        <img src="../../assets/img/doctors/doctors-2.jpg" class="img-radius" alt="User-Profile-Image">
+                      </ng-template>
                     </div>
                     <h6 class="f-w-600 text-uppercase">{{doc.name}}</h6>
                     <p>MBBS</p>
@@ -46,6 +49,10 @@
                       <div class="col-sm-6">
                         <p class="m-b-10 f-w-600">Phone No.</p>
                         <h6 class="text-muted f-w-400">8210822225</h6>
+                      </div>
+                      <div class="col-sm-6">
+                        <p class="m-b-10 f-w-600">Gender</p>
+                        <h6 class="text-muted f-w-400">{{doc.gender}}</h6>
                       </div>
                     </div>
                     <h6 class="m-b-20 m-t-40 p-b-5 b-b-default f-w-600">Patients Attended</h6>

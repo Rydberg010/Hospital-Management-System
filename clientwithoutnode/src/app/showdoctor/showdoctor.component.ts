@@ -15,7 +15,7 @@ export class ShowdoctorComponent implements OnInit {
   public name:string|null = null;
   public doc:IDoctor = {} as IDoctor; 
   
-
+  male = false;
 
   constructor(private activatedRoute:ActivatedRoute,private service:HospitalserviceService) { }
 
@@ -41,7 +41,4 @@ export class ShowdoctorComponent implements OnInit {
       })
     }
   }
-  
 }
-
-
