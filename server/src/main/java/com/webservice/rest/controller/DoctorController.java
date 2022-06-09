@@ -36,7 +36,7 @@ public class DoctorController {
     @GetMapping("doctors/doctor/{name}")
 	public MappingJacksonValue getDoctorInformation(@PathVariable String name) {
 		Doctor doctor = service.showDoctorInformation(name);
-		SimpleBeanPropertyFilter filter = SimpleBeanPropertyFilter.filterOutAllExcept("name", "field","patient_count");
+		SimpleBeanPropertyFilter filter = SimpleBeanPropertyFilter.filterOutAllExcept("name", "field","patient_count", "age", "gender");
 
 		FilterProvider filters = new SimpleFilterProvider().addFilter("DoctorFilter", filter);
 

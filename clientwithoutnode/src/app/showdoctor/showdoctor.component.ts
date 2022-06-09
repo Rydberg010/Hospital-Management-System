@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { IDoctor } from '../model/iDoctor';
-import {HospitalserviceService } from 'src/app/service/hospitalservice.service';
+import { HospitalserviceService } from 'src/app/service/hospitalservice.service';
 import { ActivatedRoute } from '@angular/router';
 
 @Component({
@@ -15,7 +15,8 @@ export class ShowdoctorComponent implements OnInit {
   public name:string|null = null;
   public doc:IDoctor = {} as IDoctor; 
   
-  male = false;
+
+  sex = this.doc.gender;
 
   constructor(private activatedRoute:ActivatedRoute,private service:HospitalserviceService) { }
 
