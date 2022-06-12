@@ -33,5 +33,4 @@ public class PatientController {
         service.savePatientInformation(patient);
         return true;
     }
-
 }
