@@ -19,7 +19,7 @@ export class CreatepatientComponent implements OnInit {
 
   ngOnInit(): void {
     this.service.getAllDoctors().subscribe({
-      next:(data) =>{
+      next:(data) => {
         this.doctors = data;
       }
     })

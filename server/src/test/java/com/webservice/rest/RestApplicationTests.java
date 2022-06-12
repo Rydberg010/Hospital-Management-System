@@ -47,8 +47,8 @@ public class RestApplicationTests
 
     @Test
     public void showDoctorInformationTest(){
-        Doctor doc = doctorController.getDoctorInfo("DR. POONAM JALAN"); 
-        assertEquals(doc.getField(),"MBBS, MD - Venereology & Leprosy");
+        Doctor doc = doctorController.getDoctorInfo("Arun Sharma"); 
+        assertEquals(doc.getField(),"Surgeon");
         // logger.info(doc.toString());
     }
 
@@ -56,7 +56,7 @@ public class RestApplicationTests
     @DirtiesContext
     @Transactional
     public void saveDoctorInformation(){
-        Doctor doc = new Doctor("hello", 12, "male", "ent");
+        Doctor doc = new Doctor("Dr. Sundar Sharma", 42, "male", "ENT");
         boolean res=doctorController.addUser(doc);
         assertTrue(res);
     }
@@ -65,7 +65,7 @@ public class RestApplicationTests
     @DirtiesContext
     @Transactional
     public void savePatientInformation(){
-        Patient patient = new Patient(1001, "hello", 30, "DR. POONAM JALAN",LocalDate.now(), "male", "xyz");
+        Patient patient = new Patient(1001, "Pranjal samanta", 30, "Arun Sharma",LocalDate.now(), "female", "xyz");
         boolean res = patientController.createPatient(patient);
         assertTrue(res);
     }
